@@ -23,10 +23,6 @@
             <td><form:input path="productId"/></td>
         </tr>
         <tr>
-            <td>Product Type</td>
-            <td><form:input path="productType"/></td>
-        </tr>
-        <tr>
             <td colspan="2" style="text-align: center"><form:button value="Search">Search</form:button></td>
         </tr>
     </table>
@@ -48,6 +44,9 @@
                 </tr>
             </c:forEach>
         </table>
+    </c:if>
+    <c:if test="${NO_DATA_FOUND}">
+        <h2>No Data Found !</h2>
     </c:if>
 </form:form>
 </body>
